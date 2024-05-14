@@ -1,21 +1,20 @@
 from .decorators import map_command
-from .player import player
+from .game import Game
 
 @map_command
-def move_right():
-    player.move(1, 0)
-
-
-@map_command
-def move_left():
-    player.move(-1, 0)
+def move_right(g: Game):
+    g.move(1, 0)
 
 
 @map_command
-def move_up():
-    player.move(0, -1)
+def move_left(g: Game):
+    g.move(-1, 0)
+
+@map_command
+def move_up(g: Game):
+    g.move(0, -1)
 
 
 @map_command
-def move_down():
-    player.move(0, 1)
+def move_down(g: Game):
+    g.move(0, 1)

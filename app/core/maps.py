@@ -1,11 +1,3 @@
-# Currently selected map
-CURRENT_MAP = [
-    ['X', 'X', 'X', 'X', 'X'],
-    ['X', ' ', ' ', ' ', 'X'],
-    ['X', ' ', ' ', ' ', 'X'],
-    ['X', ' ', ' ', ' ', 'X'],
-    ['X', 'X', 'X', 'X', 'X']
-]
-
-def print_map():
-    print(CURRENT_MAP)
+def read_map(file):
+    with open(file) as f:
+        return [list(line.strip()) for line in f.readlines()]
