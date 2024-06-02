@@ -1,4 +1,4 @@
-from core.commands import move_right, move_down
+from core.commands import *
 from core.player import Player
 from core.game import Game
 from core.decorators import init_map
@@ -13,12 +13,19 @@ def initialize() -> Game:
     map = read_map('maps/exercise1.txt')
     init_map(map)
     game = Game(player, map)
+    print("Original layout")
     game.print_map()
+    time.sleep(1)
     return game
 
+''' In exercise 1 students will explore move commands '''
 
 def main():
     game = initialize()
+    #time.sleep(1)
+
+    # type commands here
+    change_player_color(game, "blue")
     move_right(game)
     move_right(game)
     move_down(game)

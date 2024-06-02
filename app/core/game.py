@@ -17,3 +17,6 @@ class Game:
         m[self.player.y][self.player.x] = self.player.character
         for row in m:
             print(''.join(row))
+    
+    def change_player_color(self, color):
+        self.player.change_color(color)
