@@ -18,3 +18,7 @@ def move_up(g: Game):
 @map_command
 def move_down(g: Game):
     g.move(0, 1)
+
+@map_command
+def change_player_color(g: Game, color):
+    g.change_player_color(color)
