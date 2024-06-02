@@ -1,3 +1,3 @@
-from exercise1 import main as exercise
+from exercise1 import __init__ as exercise1
 
-exercise.main()
+exercise1()

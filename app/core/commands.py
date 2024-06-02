@@ -1,4 +1,4 @@
-from .decorators import map_command
+from .decorators import map_command, color_command
 from .game import Game
 
 @map_command
@@ -19,6 +19,6 @@ def move_up(g: Game):
 def move_down(g: Game):
     g.move(0, 1)
 
-@map_command
+@color_command
 def change_player_color(g: Game, color):
     g.change_player_color(color)

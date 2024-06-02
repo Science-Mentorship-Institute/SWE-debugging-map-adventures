@@ -1,33 +1,17 @@
 from core.commands import *
-from core.player import Player
-from core.game import Game
-from core.decorators import init_map
-from core.maps import read_map
-import os
-import time
 
+'''
+In exercise 1 students will explore:
+    * move commands
+    * change color command
+    * exceptions
+'''
 
-def initialize() -> Game:
-    os.system('clear')
-    player = Player(0, 0)
-    map = read_map('maps/exercise1.txt')
-    init_map(map)
-    game = Game(player, map)
-    print("Original layout")
-    game.print_map()
-    time.sleep(1)
-    return game
-
-''' In exercise 1 students will explore move commands '''
-
-def main():
-    game = initialize()
-    #time.sleep(1)
-
-    # type commands here
-    change_player_color(game, "blue")
+def play(game):
+    change_player_color(game, "red")
     move_right(game)
     move_right(game)
+    #change_player_color(game)  # IlligalArgument Exception 
     move_down(game)
     move_down(game)
-    move_down(game)
+    move_down(game)  # Obstacle Exception
