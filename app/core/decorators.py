@@ -14,9 +14,9 @@ def map_command(func):
         os.system('clear')
         print(f'Instruction {command_num}: {func.__name__}')
         func(*args, **kwargs)
-        command_num += 1
         if type(args[0]) == Game:
             args[0].print_map()
-        time.sleep(1)
+        command_num += 1
+        time.sleep(.5)
 
     return wrapper

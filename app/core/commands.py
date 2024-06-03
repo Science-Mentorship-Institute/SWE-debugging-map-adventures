@@ -1,5 +1,12 @@
 from .decorators import map_command
 from .game import Game
+import os
+
+@map_command
+def pause(g: Game):
+    g.print_map()
+    input("Press Enter to continue...")
+    os.system('clear')
 
 @map_command
 def move_right(g: Game):
